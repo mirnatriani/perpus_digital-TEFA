@@ -45,7 +45,7 @@
   </div>
 
   <div class="row mt-3">
-    <div class="col-md-6">
+    <div class="col-lg-6">
       <div class="card-body">
         <Bar :options="chartOptions" :data="chartData"></Bar>
       </div>
@@ -75,7 +75,7 @@ export default {
       chartOptions: {
         responsive: true,
         maintainAspectRatio: false,
-        aspectRatio: 0.7,
+        aspectRatio: 0.9,
       },
     };
   },

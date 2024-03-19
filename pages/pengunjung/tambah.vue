@@ -56,11 +56,22 @@
             </select>
           </div>
           <div class="d-flex justify-content-between">
-            <NuxtLink to="../pengunjung" class="btn btn-dark btn-lg rounded-3 px-5">KIRIM</NuxtLink>
-            <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-3 px-5">Kembali</NuxtLink>
+            <NuxtLink to="../pengunjung" class="btn btn-primary btn-lg rounded-2 px-5">KIRIM</NuxtLink>
+            <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-2 px-5">Kembali</NuxtLink>
           </div>
         </form>
       </div>
     </div>
   </div>
 </template>
+
+<style setup>
+.btn-primary {
+  background-color: #3accfa !important ;
+  color: black !important;
+}
+.btn-secondary {
+  background-color: #d9d9d9 !important ;
+  color: black !important;
+}
+</style>

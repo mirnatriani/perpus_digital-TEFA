@@ -4,7 +4,7 @@
       <div class="col-lg-12">
         <h2 class="text-center my-4">Cari Buku</h2>
         <div class="my-3">
-          <input type="search" class="form-control rounded-5" placeholder="Mau baca apa hari ini">
+          <input type="search" class="form-control rounded-5" placeholder="Mau baca apa hari ini" />
         </div>
         <div class="my-3 text-muted">menampilkan 4 dari 4</div>
         <div class="row">
@@ -41,9 +41,10 @@
     </div>
   </div>
   <div class="d-flex justify-content-end">
-    <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-5 px-5">Kembali</NuxtLink>
+    <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-2 px-5">Kembali</NuxtLink>
   </div>
 </template>
+
 <style scoped>
 .card-body {
   width: 100%;

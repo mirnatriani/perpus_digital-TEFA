@@ -30,5 +30,5 @@
       </div>
     </div>
   </div>
-  <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-5 px-5">Kembali</NuxtLink>
+  <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-2 px-5">Kembali</NuxtLink>
 </template>
