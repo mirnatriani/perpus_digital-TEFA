@@ -43,7 +43,44 @@
       </div>
     </div>
   </div>
+
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <div class="card-body">
+        <Bar :options="chartOptions" :data="chartData"></Bar>
+      </div>
+    </div>
+  </div>
 </template>
+<script>
+import { Bar } from "vue-chartjs";
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from "chart.js";
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
+
+export default {
+  name: "BarChart",
+  components: { Bar },
+  data() {
+    return {
+      chartData: {
+        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        datasets: [
+          {
+            label: "",
+            data: [80, 20, 60, 25, 45, 17, 55, 100, 59, 35, 25, 79],
+            backgroundColor: ["#F03C3C", "#EFE059", "#61905A", "#A68273", "#3E8DD6", "#43DDD4"],
+          },
+        ],
+      },
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+        aspectRatio: 0.7,
+      },
+    };
+  },
+};
+</script>
 
 <style scoped>
 .card {

@@ -55,10 +55,10 @@
               <option value="kembalikan">Kembalikan Buku</option>
             </select>
           </div>
-            <div class="d-flex justify-content-between">
-              <NuxtLink to="../pengunjung" class="btn btn-dark btn-lg rounded-5 px-5">KIRIM</NuxtLink>
-              <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-5 px-5">Kembali</NuxtLink>
-            </div>
+          <div class="d-flex justify-content-between">
+            <NuxtLink to="../pengunjung" class="btn btn-dark btn-lg rounded-3 px-5">KIRIM</NuxtLink>
+            <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-3 px-5">Kembali</NuxtLink>
+          </div>
         </form>
       </div>
     </div>
