@@ -25,21 +25,25 @@
       </div>
 
       <div class="col-lg-6">
-        <div class="card pengunjung rounded-5 mt-5">
-          <div class="card-body text">
-            <h1 class="ps-5">3</h1>
-            <h2 class="pt-5 ps-5">Pengunjung</h2>
+        <nuxt-link to="/pengunjung">
+          <div class="card pengunjung rounded-5 mt-5">
+            <div class="card-body text">
+              <h1 class="ps-5">{{ hasilp }}</h1>
+              <h2 class="pt-5 ps-5">Pengunjung</h2>
+            </div>
           </div>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="col-lg-6">
-        <div class="card buku rounded-5 mt-5">
-          <div class="card-body text">
-            <h1 class="ps-5">180</h1>
-            <h2 class="pt-5 ps-4">Buku</h2>
+        <nuxt-link to="/buku">
+          <div class="card buku rounded-5 mt-5">
+            <div class="card-body text">
+              <h1 class="ps-5">{{ hasilb }}</h1>
+              <h2 class="pt-5 ps-4">Buku</h2>
+            </div>
           </div>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -68,7 +72,7 @@ export default {
           {
             label: "",
             data: [80, 20, 60, 25, 45, 17, 55, 100, 59, 35, 25, 79],
-            backgroundColor: ["#F03C3C", "#EFE059", "#61905A", "#A68273", "#3E8DD6", "#43DDD4"],
+            backgroundColor: ["#43DDD4", "#43DDD4", "#43DDD4", "#43DDD4", "#43DDD4", "#43DDD4"],
           },
         ],
       },
@@ -116,3 +120,26 @@ export default {
   font-size: 7rem;
 }
 </style>
+
+<script setup>
+const supabase = useSupabaseClient();
+
+const hasilp = ref(0);
+
+const hasilb = ref(0);
+
+const pengunjung = async () => {
+  const { data, error, count } = await supabase.from("pengunjung").select("*", { count: "exact" });
+  if (count) hasilp.value = count;
+};
+
+const buku = async () => {
+  const { data, error, count } = await supabase.from("buku").select("*", { count: "exact" });
+  if (count) hasilb.value = count;
+};
+
+onMounted(() => {
+  pengunjung();
+  buku();
+});
+</script>

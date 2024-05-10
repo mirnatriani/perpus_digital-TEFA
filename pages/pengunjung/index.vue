@@ -1,3 +1,27 @@
+<script setup>
+const supabase = useSupabaseClient();
+
+const visitors = ref([]);
+
+const keyword = ref("");
+
+const hasil = ref([]);
+
+const getpengunjung = async () => {
+  const { data, error } = await supabase.from("pengunjung").select(`*, keanggotaan(*), keperluan(*)`).ilike("nama", `%${keyword.value}`).order("id", { ascending: false });
+  if (data) visitors.value = data;
+};
+const hasilPengunjung = async () => {
+  const { data, count } = await supabase.from("pengunjung").select(`*`, { count: "exact" });
+  if (data) hasil.value = count;
+};
+
+onMounted(() => {
+  getpengunjung();
+  hasilPengunjung();
+});
+</script>
+
 <template>
   <div class="container-fluid">
     <div class="row">
@@ -6,7 +30,7 @@
         <div class="my-3">
           <input type="search" class="form-control form-control-lg rounded-5" placeholder="filter..." />
         </div>
-        <div class="my-3 text-muted">menampilkan 3 dari 3</div>
+        <div class="my-3 text-muted">menampilkan {{ visitors.length }} dari {{ hasil }}</div>
         <table class="table">
           <thead>
             <tr>
@@ -18,12 +42,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1.</td>
-              <td>Mirna Triani</td>
-              <td>Siswa</td>
-              <td>27 Februari 2024, 11.00.01</td>
-              <td>Pinjam Buku</td>
+            <tr v-for="(visitor, i) in visitors" :key="i">
+              <td>{{ i + 1 }}.</td>
+              <td>{{ visitor.nama }}</td>
+              <td>{{ visitor.keanggotaan.nama }}</td>
+              <td>{{ visitor.tanggal }}, {{ visitor.waktu }}</td>
+              <td>{{ visitor.keperluan.nama }}</td>
             </tr>
           </tbody>
         </table>
