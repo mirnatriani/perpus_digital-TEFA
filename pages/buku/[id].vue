@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <nuxt-link to="../" class="btn btn-lg rounded-3 px-5 bg-primary text-black" style="float: right"> Kembali </nuxt-link>
+  <nuxt-link to="../buku" class="btn btn-lg rounded-3 px-5 bg-primary text-black" style="float: right"> Kembali </nuxt-link>
 </template>
 
 <script setup>
