@@ -12,7 +12,7 @@
       </address>
     </div>
   </div>
-</template>
+</template>   
 
 <style scoped>
 .bg-primary {
