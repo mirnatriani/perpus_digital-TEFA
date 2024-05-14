@@ -19,6 +19,7 @@
   background-color: #3accfa !important;
 }
 img {
-  width: 10%;
+  width: 100%;
+  
 }
 </style>
