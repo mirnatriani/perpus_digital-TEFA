@@ -1,60 +1,71 @@
 <template>
-  <div class="container-fluid">
-    <div class="row my-5">
-      <div class="col-lg-6">
-        <nuxt-link to="/pengunjung/tambah">
-          <div class="card bg-pengunjung rounded-5 mt-5">
-            <div class="card-body">
-              <h2>Pengunjung</h2>
-            </div>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row my-5">
+          <div class="col-lg-6">
+            <nuxt-link to="/pengunjung/tambah">
+              <div class="card bg-pengunjung rounded-5 mt-5">
+                <div class="card-body">
+                  <h2>Pengunjung</h2>
+                </div>
+              </div>
+            </nuxt-link>
           </div>
-        </nuxt-link>
+
+          <div class="col-lg-6">
+            <nuxt-link to="/buku">
+              <div class="card bg-buku rounded-5 mt-5">
+                <div class="card-body">
+                  <h2>Cari Buku</h2>
+                </div>
+              </div>
+            </nuxt-link>
+          </div>
+          <div class="statistik rounded mb-7">
+            <h1 class="ps-0 pt-5 ms-5">STATISTIK</h1>
+          </div>
+
+          <div class="col-lg-6">
+            <nuxt-link to="/pengunjung">
+              <div class="card pengunjung rounded-5 mt-5">
+                <div class="card-body text">
+                  <h1 class="ps-5">{{ hasilp }}</h1>
+                  <h2 class="pt-5 ps-5">Pengunjung</h2>
+                </div>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col-lg-6">
+            <nuxt-link to="/buku">
+              <div class="card buku rounded-5 mt-5">
+                <div class="card-body text">
+                  <h1 class="ps-5">{{ hasilb }}</h1>
+                  <h2 class="pt-5 ps-4">Buku</h2>
+                </div>
+              </div>
+            </nuxt-link>
+          </div>
+        </div>
       </div>
 
-      <div class="col-lg-6">
-        <nuxt-link to="/buku">
-          <div class="card bg-buku rounded-5 mt-5">
-            <div class="card-body">
-              <h2>Cari Buku</h2>
-            </div>
+      <div class="row mt-3">
+        <div class="col-lg-6">
+          <div class="card-body">
+            <Bar :options="chartOptions" :data="chartData"></Bar>
           </div>
-        </nuxt-link>
+        </div>
       </div>
-      <div class="statistik rounded mb-7">
-        <h1 class="ps-0 pt-5 ms-5">STATISTIK</h1>
-      </div>
-
-      <div class="col-lg-6">
-        <nuxt-link to="/pengunjung">
-          <div class="card pengunjung rounded-5 mt-5">
-            <div class="card-body text">
-              <h1 class="ps-5">{{ hasilp }}</h1>
-              <h2 class="pt-5 ps-5">Pengunjung</h2>
-            </div>
-          </div>
-        </nuxt-link>
-      </div>
-
-      <div class="col-lg-6">
-        <nuxt-link to="/buku">
-          <div class="card buku rounded-5 mt-5">
-            <div class="card-body text">
-              <h1 class="ps-5">{{ hasilb }}</h1>
-              <h2 class="pt-5 ps-4">Buku</h2>
-            </div>
-          </div>
-        </nuxt-link>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mt-3">
-    <div class="col-lg-6">
-      <div class="card-body">
-        <Bar :options="chartOptions" :data="chartData"></Bar>
-      </div>
-    </div>
-  </div>
+    </body>
+  </html>
 </template>
 <script>
 import { Bar } from "vue-chartjs";

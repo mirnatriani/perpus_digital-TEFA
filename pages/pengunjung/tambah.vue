@@ -52,9 +52,9 @@
             </select>
           </div>
           <div class="d-flex justify-content-between">
-            <button class="btn btn-primary btn-lg rounded-2 me-3 px-5" type="submit">Kirim</button>
+            <button class="btn btn-primary btn-sm rounded-2 me-2 px-5" type="submit">Kirim</button>
 
-            <NuxtLink to="/" class="btn btn-secondary btn-lg rounded-2 px-5">Kembali</NuxtLink>
+            <NuxtLink to="/" class="btn btn-secondary btn-sm rounded-2 px-5">Kembali</NuxtLink>
           </div>
         </form>
       </div>
