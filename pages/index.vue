@@ -120,7 +120,7 @@ export default {
   font-size: 7rem;
 }
 .card{
-  width: 50%;
+  widh: 50%;
   margin-left: 20%;
 }
 </style>
