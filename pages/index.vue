@@ -100,7 +100,7 @@ export default {
   opacity: 50%;
 }
 .card.bg-buku {
-  background: url("../assets/img/bg-home-cari-buku.jpg") no-repeat center center;
+  background: url("../assets/img/bg-home-cari-buku.webp") no-repeat center center;
   background-size: cover;
   color: #180101;
   opacity: 50%;
@@ -119,7 +119,7 @@ export default {
 .text > h1 {
   font-size: 7rem;
 }
-.card{
+.card {
   width: 50%;
   margin-left: 20%;
 }
