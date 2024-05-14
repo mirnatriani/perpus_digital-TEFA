@@ -21,7 +21,7 @@
         </nuxt-link>
       </div>
       <div class="statistik rounded mb-7">
-        <h1 class="ps-0 pt-5">STATISTIK</h1>
+        <h1 class="ps-0 pt-5 ms-5">STATISTIK</h1>
       </div>
 
       <div class="col-lg-6">
@@ -118,6 +118,10 @@ export default {
 }
 .text > h1 {
   font-size: 7rem;
+}
+.card {
+  width: 50%;
+  margin-left: 20%;
 }
 </style>
 
