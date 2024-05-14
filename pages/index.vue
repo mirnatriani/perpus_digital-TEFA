@@ -100,11 +100,14 @@ export default {
   opacity: 50%;
 }
 .card.bg-buku {
-  background: url("..assets/img/bg-home-cari-buku1.webp") no-repeat center center;
+  background-image: url("../assets/img/bg-home-cari-buku1.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  color: #180101;
+  color: #0c0101;
   opacity: 50%;
 }
+
 .card.pengunjung {
   background-color: #f3eebb;
 }
@@ -119,10 +122,10 @@ export default {
 .text > h1 {
   font-size: 7rem;
 }
-.card {
+/* .card {
   width: 50%;
   margin-left: 20%;
-}
+} */
 </style>
 
 <script setup>

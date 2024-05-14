@@ -1,6 +1,6 @@
 <template>
   <div class="row p-3 bg-primary text-white">
-    <div class="col-lg-1">
+    <div class="col-md-1">
       <img src="~/assets/img/LOGO-SMK4.png" alt="logo SMKN 4" />
     </div>
 
@@ -18,4 +18,7 @@
 .bg-primary {
   background-color: #3accfa !important;
 }
+/* img {
+  width: 90%;
+} */
 </style>
