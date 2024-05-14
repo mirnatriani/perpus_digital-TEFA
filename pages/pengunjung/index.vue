@@ -1,4 +1,11 @@
 <script setup>
+useHead({
+  title:"PERPUS DIGITAL",
+  meta:[{
+    name:"description",
+    content:'Halaman Riwayat Kunjungan',
+  }]
+})
 const supabase = useSupabaseClient();
 
 const visitors = ref([]);
