@@ -119,7 +119,10 @@ export default {
 .text > h1 {
   font-size: 7rem;
 }
-
+.card{
+  width: 50%;
+  margin-left: 20%;
+}
 </style>
 
 <script setup>
