@@ -18,8 +18,4 @@
 .bg-primary {
   background-color: #3accfa !important;
 }
-img {
-  width: 100%;
-  
-}
 </style>
