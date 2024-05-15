@@ -92,14 +92,14 @@ export default {
   box-shadow: 1px 1px 10px #424242;
 }
 .card.bg-pengunjung {
-  background-image: url("../assets/img/caribuku.webp");
+  background-image: url("../assets/img/kunjungan.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   color: #0c0101;
 }
 .card.bg-buku {
-  background-image: url("../assets/img/kunjungan.webp");
+  background-image: url("../assets/img/caribuku.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
