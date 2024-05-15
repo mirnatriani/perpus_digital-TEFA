@@ -72,7 +72,7 @@ export default {
           {
             label: "",
             data: [80, 20, 60, 25, 45, 17, 55, 100, 59, 35, 25, 79],
-            backgroundColor: ["#43DDD4", "#43DDD4", "#43DDD4", "#43DDD4", "#43DDD4", "#43DDD4"],
+            backgroundColor: ["#3accfa"],
           },
         ],
       },
@@ -92,20 +92,18 @@ export default {
   box-shadow: 1px 1px 10px #424242;
 }
 .card.bg-pengunjung {
-  background-image: url("../assets/img/bg-home-kunjungan1.webp");
+  background-image: url("../assets/img/caribuku.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   color: #0c0101;
-  opacity: 50%;
 }
 .card.bg-buku {
-  background-image: url("../assets/img/bg-home-cari-buku1.webp");
+  background-image: url("../assets/img/kunjungan.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   color: #0c0101;
-  opacity: 50%;
 }
 
 .card.pengunjung {
@@ -130,12 +128,14 @@ export default {
 
 <script setup>
 useHead({
-  title:"PERPUS DIGITAL",
-  meta:[{
-    name:"description",
-    content:'Halaman buku',
-  }]
-})
+  title: "PERPUS DIGITAL",
+  meta: [
+    {
+      name: "description",
+      content: "Halaman buku",
+    },
+  ],
+});
 const supabase = useSupabaseClient();
 
 const hasilp = ref(0);
