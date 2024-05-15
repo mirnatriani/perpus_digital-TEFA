@@ -1,11 +1,13 @@
 <script setup>
 useHead({
-  title:"PERPUS DIGITAL",
-  meta:[{
-    name:"description",
-    content:'Halaman Riwayat Kunjungan',
-  }]
-})
+  title: "PERPUS DIGITAL",
+  meta: [
+    {
+      name: "description",
+      content: "Halaman Riwayat Kunjungan",
+    },
+  ],
+});
 const supabase = useSupabaseClient();
 
 const visitors = ref([]);
@@ -15,7 +17,7 @@ const keyword = ref([]);
 const hasil = ref([]);
 
 const getpengunjung = async () => {
-  const { data, error } = await supabase.from("pengunjung").select(`*, keanggotaan(*), keperluan(*)`).ilike("nama", `%${keyword.value}`).order("id", { ascending: false });
+  const { data, error } = await supabase.from("pengunjung").select(`*, keanggotaan(*), keperluan(*)`).ilike("nama", `%${keyword.value}%`).order("id", { ascending: false });
   if (data) visitors.value = data;
 };
 const hasilPengunjung = async () => {
